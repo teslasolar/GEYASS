@@ -1,1 +1,96 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>🦅 GEYASS v1.0 κλ○</title><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:monospace;background:#0a0a0a;color:#0f0;padding:20px}h1{color:#ff0;text-align:center;margin:20px 0}h2{color:#0ff;margin:15px 0 10px}.card{background:#1a1a1a;border:2px solid #0f0;border-radius:8px;padding:15px;margin:10px 0;cursor:pointer;transition:all .3s}.card:hover{border-color:#ff0;transform:scale(1.02)}.card h3{color:#0ff;margin-bottom:5px}.card p{color:#0f0;font-size:12px}iframe{width:100%;height:400px;border:2px solid #0f0;border-radius:8px;margin:10px 0;display:none;background:#000}.active iframe{display:block}code{background:#2a2a2a;padding:2px 6px;border-radius:3px;color:#ff0}a{color:#0ff;text-decoration:none}a:hover{color:#ff0}.stats{display:flex;justify-content:space-around;margin:20px 0;flex-wrap:wrap}.stat{text-align:center;padding:10px}.stat-num{font-size:24px;color:#ff0}.stat-label{font-size:12px;color:#0ff}.demo-btn{background:#0f0;color:#000;border:none;padding:15px 30px;border-radius:8px;cursor:pointer;font-family:monospace;font-weight:bold;font-size:16px;margin:20px auto;display:block;transition:all .3s}.demo-btn:hover{background:#ff0;transform:scale(1.1)}</style></head><body><h1>🦅 GEYASS v1.0</h1><h2>κλ○ Trinity Self-Extracting System</h2><div style="display:flex;justify-content:center;gap:15px;flex-wrap:wrap"><a href="demo.html"><button class="demo-btn">▶ Run Demo</button></a><a href="agent.html"><button class="demo-btn" style="background:#0ff">🤖 κλ○ Agent</button></a></div><div class="stats"><div class="stat"><div class="stat-num">κ=0.618</div><div class="stat-label">structure</div></div><div class="stat"><div class="stat-num">λ=0.693</div><div class="stat-label">information</div></div><div class="stat"><div class="stat-num">○=±0</div><div class="stat-label">boundary</div></div></div><h2>📁 Modules</h2><div id="modules"></div><script>const dirs=[{name:'core',desc:'κλ○ primitives',path:'core/index.html'},{name:'net',desc:'P2P mesh',path:'net/index.html'},{name:'ygg',desc:'Evolution',path:'ygg/index.html'},{name:'ass',desc:'Bare metal',path:'ass/index.html'},{name:'std',desc:'Standards',path:'std/index.html'},{name:'agent',desc:'Sub-agent',path:'agent/index.html'},{name:'test',desc:'Tests',path:'test/index.html'}];const container=document.getElementById('modules');dirs.forEach(d=>{const card=document.createElement('div');card.className='card';card.innerHTML=`<h3>${d.name}/</h3><p>${d.desc}</p><iframe src="${d.path}"></iframe>`;card.onclick=()=>card.classList.toggle('active');container.appendChild(card)})</script></body></html>
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>🦅 GEYASS v1.0 κλ○</title><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:monospace;background:#0a0a0a;color:#0f0;display:grid;grid-template-areas:"north north north""west center east""south south south";grid-template-rows:auto 1fr auto;grid-template-columns:200px 1fr 200px;min-height:100vh}
+#north{grid-area:north;background:#111;padding:15px;text-align:center;border-bottom:2px solid #0f0}
+#south{grid-area:south;background:#111;padding:10px;text-align:center;border-top:2px solid #0f0;font-size:11px}
+#west{grid-area:west;background:#0a0a0a;padding:10px;border-right:2px solid #0f0;overflow-y:auto}
+#east{grid-area:east;background:#0a0a0a;padding:10px;border-left:2px solid #0f0;overflow-y:auto}
+#center{grid-area:center;padding:15px;overflow-y:auto}
+h1{color:#ff0;margin:5px 0}
+h2{color:#0ff;margin:10px 0 5px;font-size:14px}
+.btn{background:#0f0;color:#000;border:none;padding:10px 20px;border-radius:4px;cursor:pointer;font-family:monospace;font-weight:bold;margin:5px;transition:all .2s}
+.btn:hover{background:#ff0;transform:scale(1.05)}
+.btn-alt{background:#0ff}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:15px}
+.card{background:#1a1a1a;border:2px solid #0f0;border-radius:8px;overflow:hidden;transition:all .3s}
+.card:hover{border-color:#ff0;transform:translateY(-2px)}
+.card-header{background:#111;padding:10px;display:flex;justify-content:space-between;align-items:center}
+.card-header h3{color:#0ff;font-size:13px}
+.card-body{height:200px}
+.card-body iframe{width:100%;height:100%;border:none;background:#000}
+.stat{background:#1a1a1a;padding:8px;margin:5px 0;border-radius:4px;text-align:center}
+.stat-val{color:#ff0;font-size:18px}
+.stat-lbl{color:#0ff;font-size:10px}
+.nav-item{display:block;padding:8px;margin:3px 0;background:#1a1a1a;border-radius:4px;color:#0f0;text-decoration:none;font-size:11px;transition:all .2s}
+.nav-item:hover{background:#0f0;color:#000}
+.nav-item.active{border-left:3px solid #ff0}
+.mini{font-size:10px;color:#888}
+</style></head><body>
+
+<div id="north">
+<h1>🦅 GEYASS v1.0</h1>
+<div style="color:#0ff;margin:5px">κλ○ Trinity Self-Extracting System</div>
+<div style="margin:10px"><a href="demo.html"><button class="btn">▶ Demo</button></a><a href="agent.html"><button class="btn btn-alt">🤖 Agent</button></a><a href="web/runner.html"><button class="btn">⚡ Runner</button></a></div>
+</div>
+
+<div id="west">
+<h2>📊 Trinity</h2>
+<div class="stat"><div class="stat-val">κ=0.618</div><div class="stat-lbl">structure</div></div>
+<div class="stat"><div class="stat-val">λ=0.693</div><div class="stat-lbl">information</div></div>
+<div class="stat"><div class="stat-val">○=±0</div><div class="stat-lbl">boundary</div></div>
+<h2>🔗 Quick Nav</h2>
+<a class="nav-item" href="#core">core/ primitives</a>
+<a class="nav-item" href="#net">net/ mesh</a>
+<a class="nav-item" href="#ygg">ygg/ evolution</a>
+<a class="nav-item" href="#ass">ass/ metal</a>
+<a class="nav-item" href="#std">std/ standards</a>
+<a class="nav-item" href="#agent">agent/ llm</a>
+<a class="nav-item" href="#test">test/ verify</a>
+<a class="nav-item" href="#web">web/ runtime</a>
+</div>
+
+<div id="center">
+<h2>📁 Modules (Live Widgets)</h2>
+<div class="grid" id="modules"></div>
+</div>
+
+<div id="east">
+<h2>⚡ Actions</h2>
+<button class="btn" style="width:100%;margin:5px 0" onclick="runAll()">▶ Run All Tests</button>
+<button class="btn btn-alt" style="width:100%;margin:5px 0" onclick="location.href='agent.html'">🤖 Ask Agent</button>
+<h2>📈 Stats</h2>
+<div class="stat"><div class="stat-val">50+</div><div class="stat-lbl">files</div></div>
+<div class="stat"><div class="stat-val">&lt;250</div><div class="stat-lbl">tokens/file</div></div>
+<div class="stat"><div class="stat-val">8</div><div class="stat-lbl">modules</div></div>
+<h2>🔥 Status</h2>
+<div class="stat"><div class="stat-val" style="color:#0f0">LIVE</div><div class="stat-lbl">system ready</div></div>
+</div>
+
+<div id="south">
+<span style="color:#ff0">κλ○</span> Structure + Information + Boundary = ∞ |
+<a href="https://github.com/teslasolar/GEYASS" style="color:#0ff">GitHub</a> |
+<span class="mini">v1.0 • MIT License • All files &lt;250 tokens</span>
+</div>
+
+<script>
+const modules=[
+{id:'core',name:'core/',desc:'κλ○ primitives',src:'core/index.html',color:'#0f0'},
+{id:'net',name:'net/',desc:'P2P mesh',src:'net/index.html',color:'#0ff'},
+{id:'ygg',name:'ygg/',desc:'Evolution Ξ→Ψ',src:'ygg/index.html',color:'#f0f'},
+{id:'ass',name:'ass/',desc:'Bare metal',src:'ass/index.html',color:'#f00'},
+{id:'std',name:'std/',desc:'Standards',src:'std/index.html',color:'#ff0'},
+{id:'agent',name:'agent/',desc:'LLM κλ○',src:'agent/index.html',color:'#0ff'},
+{id:'test',name:'test/',desc:'Verify',src:'test/index.html',color:'#0f0'},
+{id:'web',name:'web/',desc:'Runtime',src:'web/index.html',color:'#fff'}
+];
+const grid=document.getElementById('modules');
+modules.forEach(m=>{
+const card=document.createElement('div');
+card.className='card';
+card.id=m.id;
+card.innerHTML=`<div class="card-header"><h3 style="color:${m.color}">${m.name}</h3><span class="mini">${m.desc}</span></div><div class="card-body"><iframe src="${m.src}" loading="lazy"></iframe></div>`;
+grid.appendChild(card);
+});
+function runAll(){window.open('test/index.html','_blank')}
+</script>
+</body></html>

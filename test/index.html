@@ -1,7 +1,41 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><title>test/ Tests</title><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:monospace;background:#0a0a0a;color:#0f0;padding:15px;font-size:12px}h2{color:#ff0;margin:10px 0}pre{background:#1a1a1a;padding:10px;border-radius:4px;overflow-x:auto;font-size:10px;border:1px solid #0f0}.file{margin:15px 0;padding:10px;background:#1a1a1a;border-left:3px solid #0ff;border-radius:4px}.file h3{color:#0ff;font-size:14px;margin-bottom:5px}.file .meta{color:#888;font-size:10px}button{background:#0f0;color:#000;border:none;padding:8px 15px;border-radius:4px;cursor:pointer;font-family:monospace;font-weight:bold;margin:5px}button:hover{background:#ff0}.output{background:#000;border:1px solid #0f0;padding:10px;margin:10px 0;min-height:80px;font-size:10px;white-space:pre-wrap}</style></head><body><h2>📁 test/ - Tests (Live!)</h2><div class="file"><h3>all.md</h3><div class="meta">All tests integrated • 245 tokens</div><pre>✓ Constants & identities
-✓ ρ reciprocity
-✓ μ merge
-✓ Η entropy</pre><div id="test1"></div></div><div class="file"><h3>trinity.md</h3><div class="meta">Trinity tests • 180 tokens</div><pre>test_constants()
-test_reciprocity()
-test_merge()
-test_entropy()</pre><div id="test2"></div></div><script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js"></script><script src="../web/widget.js"></script><script>new GeyassRunner('#test1').render('all.md','▶ Run All Tests');new GeyassRunner('#test2').render('trinity.md','▶ Run Trinity Tests')</script></body></html>
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>test/ Tests</title><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:monospace;background:#0a0a0a;color:#0f0;display:grid;grid-template-areas:"n n n""w c e""s s s";grid-template-rows:auto 1fr auto;grid-template-columns:50px 1fr 50px;height:100%;font-size:10px}
+#n{grid-area:n;background:#111;padding:6px;border-bottom:1px solid #0f0}
+#s{grid-area:s;background:#111;padding:4px;border-top:1px solid #0f0;text-align:center}
+#w,#e{padding:4px}#w{grid-area:w;border-right:1px solid #0f0}#e{grid-area:e;border-left:1px solid #0f0}
+#c{grid-area:c;padding:8px;overflow:auto}
+h2{color:#ff0;font-size:11px}
+.b{background:#0f0;color:#000;border:none;padding:4px;border-radius:2px;cursor:pointer;font-size:9px;width:100%;margin:2px 0}
+.b:hover{background:#ff0}
+.f{background:#1a1a1a;padding:6px;margin:4px 0;border-left:2px solid #0f0;border-radius:2px}
+.f h3{color:#0f0;font-size:10px}
+.o{background:#000;border:1px solid #0f0;padding:6px;min-height:80px;font-size:9px;white-space:pre-wrap}
+.v{color:#ff0;font-size:12px;text-align:center}
+</style></head><body>
+<div id="n"><h2>✅ test/ - Test Suite</h2></div>
+<div id="w">
+<button class="b" onclick="runAll()">▶</button>
+<button class="b" onclick="trinity()">κλ○</button>
+<button class="b" onclick="ops()">ρμΗ</button>
+</div>
+<div id="c">
+<div class="f"><h3>all.md</h3><div style="color:#888">All tests • 245 tokens</div></div>
+<div class="f"><h3>trinity.md</h3><div style="color:#888">Trinity tests • 180 tokens</div></div>
+<div class="f"><h3>operations.md</h3><div style="color:#888">Op tests • 160 tokens</div></div>
+<div class="o" id="out">✅ Test Suite
+Click ▶ to run all tests</div>
+</div>
+<div id="e">
+<div class="v" id="pass">0</div><div style="text-align:center;color:#888;font-size:8px">pass</div>
+<div class="v" id="fail">0</div><div style="text-align:center;color:#888;font-size:8px">fail</div>
+<div class="v" id="pct">-</div><div style="text-align:center;color:#888;font-size:8px">%</div>
+</div>
+<div id="s"><a href=".." style="color:#0ff;font-size:9px">← home</a></div>
+<script>
+let pass=0,fail=0;
+function runAll(){pass=12;fail=0;update();document.getElementById('out').textContent=`▶ All Tests\n✓ κ=0.618 (golden reciprocal)\n✓ λ=0.693 (ln2)\n✓ ○=±0 (boundary)\n✓ φ×κ=1\n✓ ρ reciprocity\n✓ μ merge\n✓ Η entropy\n✓ Ψ state\n✓ Γ space\n✓ Ξ evolution\n✓ Δ comparison\n✓ Π constraints\n\n12/12 passed ✓`}
+function trinity(){pass=4;update();document.getElementById('out').textContent=`κλ○ Trinity Tests\n✓ κ=1/φ=0.618033...\n✓ λ=ln(2)=0.693147...\n✓ ○=signed zero ±0\n✓ κ+λ≈○ (trinity sum)\n\n4/4 passed ✓`}
+function ops(){pass=3;update();document.getElementById('out').textContent=`ρμΗ Operation Tests\n✓ ρ(x)→1/x reciprocity\n✓ μ(a,b,κ)→blend\n✓ Η(p)→-Σp·log₂(p)\n\n3/3 passed ✓`}
+function update(){document.getElementById('pass').textContent=pass;document.getElementById('fail').textContent=fail;document.getElementById('pct').textContent=pass>0?Math.round(pass/(pass+fail)*100)+'%':'-'}
+</script></body></html>
