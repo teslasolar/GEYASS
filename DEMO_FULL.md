@@ -1,4 +1,4 @@
-# 🦅 GEYASS v6.0 Full System Demo
+# 🦅 GEYASS v1.0 Full System Demo
 
 ## Run This Demo
 ```bash
@@ -8,7 +8,7 @@ python3 geyass.py DEMO_FULL.md
 ## Code
 ```python
 #!/usr/bin/env python3
-print("🦅 GEYASS v6.0 κλ○ Trinity - Full System Demo\n")
+print("🦅 GEYASS v1.0 κλ○ Trinity - Full System Demo\n")
 
 # 1. Constants
 phi=(1+5**.5)/2

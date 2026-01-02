@@ -1,7 +1,7 @@
 ```python
 #!/usr/bin/env python3
 # UDT:Demo:v5w6:240
-print("🦅 GEYASS v6.0 κλ○ Trinity Demo\n")
+print("🦅 GEYASS v1.0 κλ○ Trinity Demo\n")
 print("═"*60)
 
 # Load constants

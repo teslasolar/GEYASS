@@ -1,4 +1,4 @@
-# 🦅 GEYASS v6.0
+# 🦅 GEYASS v1.0
 ## Gradient Eden Yggdrasil Assembly Sub-System
 ## κλ○ Trinity Self-Extracting System
 

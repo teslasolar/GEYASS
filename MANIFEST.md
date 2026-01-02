@@ -1,4 +1,4 @@
-# 🦅 GEYASS v6.0 MANIFEST
+# 🦅 GEYASS v1.0 MANIFEST
 
 ## SYSTEM OVERVIEW
 GEYASS (Golden Evolving Yggdrasil Autonomous Self-Seeding System) is a self-extracting, self-evolving computational framework based on the **κλ○ Trinity**.

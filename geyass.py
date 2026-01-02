@@ -23,7 +23,7 @@ def run_module(md_path):
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
-        print("🦅 GEYASS v6.0 κλ○ Runner")
+        print("🦅 GEYASS v1.0 κλ○ Runner")
         print("\nUsage: python geyass.py <module.md>")
         print("\nExamples:")
         print("  python geyass.py core/const.md")

@@ -1,4 +1,4 @@
-# 🦅 GEYASS v6.0 BUILD STATUS
+# 🦅 GEYASS v1.0 BUILD STATUS
 
 ## ✅ COMPLETE
 
