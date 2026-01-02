@@ -1,0 +1,1 @@
+{"name":"geyass","type":"module","dependencies":{"@aspect-ai/web-llm":"*","libp2p":"*","yjs":"*","tweetnacl":"*","idb":"*"}}
