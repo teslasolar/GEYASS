@@ -1,11 +1,12 @@
 # 🦅 GEYASS v6.0
+## Gradient Eden Yggdrasil Assembly Sub-System
 ## κλ○ Trinity Self-Extracting System
 
 ## QUICK START
 ```bash
 # Run from markdown
-python run.md core/const.md
-node run.md ygg/tree.md
+python3 geyass.py DEMO_FULL.md
+python3 geyass.py demo.md
 ```
 
 ## STRUCTURE
@@ -16,6 +17,7 @@ ygg/     Evolution (tree,forest,evolve)
 ass/     Bare metal (boot,kernel,alloc)
 std/     Standards (parse,vendor)
 agent/   Sub-agent (plan,directives)
+test/    Tests (trinity,tokens)
 ```
 
 ## TRINITY
@@ -37,5 +39,5 @@ All code in markdown. All <250 tokens. UDT headers required.
 
 ## INVOKE
 ```bash
-python run.md <any-module.md>
+python3 geyass.py <any-module.md>
 ```
