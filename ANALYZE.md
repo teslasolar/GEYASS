@@ -70,11 +70,12 @@ Limit:    v∞   (self-evolving)
 
 ---
 
-### Tier 1: Immediate (Burns in 24h)
+### Tier 1: Immediate ✅ COMPLETE
 ```
-[BURNS:24h] Enable GitHub Pages
-[BURNS:24h] Add MIT LICENSE
-[BURNS:24h] Create .github/workflows/pages.yml
+[DONE] Enable GitHub Pages
+[DONE] Add MIT LICENSE
+[DONE] Create .github/workflows/pages.yml
+[BONUS] Create CONTRIBUTING.md
 ```
 
 ### Tier 2: This Week (Burns in 168h)
